@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	margin: 0px;
+}
+
+.container {
+	max-width: 1260px;
+	padding: 0px 15px;
+	margin: auto;
+}
+
+.hero-wrapper {
+	position: relative;
+}
+
+.hero::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: black;
+	z-index: -1;
+}
+
+.hero {
+	position: relative;
+	padding: 220px 0px 353px;
+
+	&_decription {
+		font-family: 'Ubuntu';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 150%;
+		color: #FFFFFF;
+	}
+
+	&__content {
+		max-width: 595px;
+	}
+
+	&__title {
+		font-family: 'Ubuntu';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 72px;
+		line-height: 130%;
+		letter-spacing: 1px;
+		color: #FFFFFF;
+	}
+
+	&__btns {
+		display: flex;
+		gap: 20px;
+	}
+
+	&__btns:not(last-child) {
+		margin-top: 60px;
+	}
+}
+
+
+
+.button {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 52px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background-color: #FF5A30;
+	border-radius: 5px;
+	padding: 0px 40px;
+	border: none;
+}
+
+
+
+.slider {
+	position: relative;
+
+	&__items {
+		display: flex;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	&__item {
+		min-width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	&__item:nth-child(4) {
+		transform: translateX(-400%);
+	}
+
+	&__item:nth-child(3) {
+		transform: translateX(-300%);
+	}
+
+	&__item:nth-child(2) {
+		transform: translateX(-200%);
+	}
+
+	&__item:nth-child(1) {
+		transform: translateX(-100%);
+	}
+}
+
+
+
+.slider__btn {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: none;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+
+	&-next {
+		background-image: url('../img/Line\ \(Stroke\)next.svg');
+		right: 40px;
+	}
+
+	&-prev {
+		background-image: url('../img/Line\ \(Stroke\).svg');
+		left: 40px;
+	}
+}

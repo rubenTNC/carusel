@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0px 15px;
+  margin: auto;
+}
+
+.hero-wrapper {
+  position: relative;
+}
+
+.hero::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: -1;
+}
+
+.hero {
+  position: relative;
+  padding: 220px 0px 353px;
+}
+
+.hero_decription {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+
+.hero__content {
+  max-width: 595px;
+}
+
+.hero__title {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+
+.hero__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.hero__btns:not(last-child) {
+  margin-top: 60px;
+}
+
+.button {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #FF5A30;
+  border-radius: 5px;
+  padding: 0px 40px;
+  border: none;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider__item {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider__item:nth-child(4) {
+  -webkit-transform: translateX(-400%);
+          transform: translateX(-400%);
+}
+
+.slider__item:nth-child(3) {
+  -webkit-transform: translateX(-300%);
+          transform: translateX(-300%);
+}
+
+.slider__item:nth-child(2) {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+
+.slider__item:nth-child(1) {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.slider__btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+}
+
+.slider__btn-next {
+  background-image: url("../img/Line (Stroke)next.svg");
+  right: 40px;
+}
+
+.slider__btn-prev {
+  background-image: url("../img/Line (Stroke).svg");
+  left: 40px;
+}
