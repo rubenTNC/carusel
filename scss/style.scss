@@ -86,58 +86,44 @@ h1 {
 	border: none;
 }
 
-
+.hero__slider {
+}
 
 .slider {
 	position: relative;
+	max-width:  100%;
+	margin: auto;
+	overflow: hidden;
 
-	&__items {
+	&__container {
 		display: flex;
-		width: 100%;
-		overflow: hidden;
+		transition: 1s;
 	}
 
 	&__item {
 		min-width: 100%;
-		display: flex;
-		justify-content: center;
-	}
-	&__item:nth-child(4) {
-		transform: translateX(-400%);
+		text-align: center;
 	}
 
-	&__item:nth-child(3) {
-		transform: translateX(-300%);
+	&__btn {
+		width: 48px;
+		height: 48px;
+		border: none;
+		border-radius: 50%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
-	&__item:nth-child(2) {
-		transform: translateX(-200%);
+	&__btn-next {
+		background-image: url("../img/Line\ \(Stroke\)next.svg");
+		right: 30px;
 	}
 
-	&__item:nth-child(1) {
-		transform: translateX(-100%);
-	}
-}
-
-
-
-.slider__btn {
-	width: 48px;
-	height: 48px;
-	border-radius: 50%;
-	border: none;
-	background-position: center center;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 50%;
-
-	&-next {
-		background-image: url('../img/Line\ \(Stroke\)next.svg');
-		right: 40px;
-	}
-
-	&-prev {
-		background-image: url('../img/Line\ \(Stroke\).svg');
-		left: 40px;
+	&__btn-prev {
+		background-image: url("../img/Line\ \(Stroke\).svg");
+		left: 30px;
 	}
 }

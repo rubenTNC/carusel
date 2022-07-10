@@ -93,63 +93,43 @@ h1 {
 
 .slider {
   position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
-.slider__items {
+.slider__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .slider__item {
   min-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.slider__item:nth-child(4) {
-  -webkit-transform: translateX(-400%);
-          transform: translateX(-400%);
-}
-
-.slider__item:nth-child(3) {
-  -webkit-transform: translateX(-300%);
-          transform: translateX(-300%);
-}
-
-.slider__item:nth-child(2) {
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
-}
-
-.slider__item:nth-child(1) {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  text-align: center;
 }
 
 .slider__btn {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
   border: none;
+  border-radius: 50%;
   background-position: center center;
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .slider__btn-next {
   background-image: url("../img/Line (Stroke)next.svg");
-  right: 40px;
+  right: 30px;
 }
 
 .slider__btn-prev {
   background-image: url("../img/Line (Stroke).svg");
-  left: 40px;
+  left: 30px;
 }
